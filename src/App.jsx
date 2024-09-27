@@ -1,15 +1,15 @@
-import { Header } from "./componets/Header/Header"
-import { Main } from "./pages/main/Main"
+import Header from "./components/Header/Header";
+import Main from "./pages/Main/Main";
 
 function App() {
   return (
     <>
-    <Header />
-    <div className="container">
-      <Main />
-    </div>
+      <Header />
+      <div className="container">
+        <Main />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

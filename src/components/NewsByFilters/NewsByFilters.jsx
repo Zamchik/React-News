@@ -1,15 +1,10 @@
 import NewsList from "../NewsList/NewsList";
-import Categories from "../Categories/Categories";
 import Pagination from "../Pagination/Pagination";
-import Search from "../Search/Search";
 import styles from "./styles.module.css";
 import { TOTAL_PAGES } from "../../constants/constants";
-import { useFetch } from "../../helpers/hooks/useFetch";
-import { getCategories } from "../../api/apiNews";
+import NewsFilters from "../NewsFilters/NewsFilters";
 
 const NewsByFilters = ({filters, changeFilter, isLoading, news}) => {
-
-  const {data: dataCategories} = useFetch(getCategories)
 
     const handleNextPage = () => {
         if (filters.page_number < TOTAL_PAGES) {
@@ -28,17 +23,9 @@ const NewsByFilters = ({filters, changeFilter, isLoading, news}) => {
     }
 
   return (
-    <section className={styles.section}>
-      {dataCategories ? (
-            <Categories 
-            categories={dataCategories.categories} 
-            setSelectedCategory={(category) => changeFilter("category", category)} 
-            selectedCategory={filters.category}/> 
-            ) : null}
+    <section className={styles.section}>    
 
-            <Search
-            keywords={filters.keywords} 
-            setKeywords={(keywords) => changeFilter("keywords", keywords)}/>
+            <NewsFilters filters={filters} changeFilter={changeFilter}/>   
 
             <Pagination
             handleNextPage={handleNextPage}

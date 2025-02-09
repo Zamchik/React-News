@@ -5,6 +5,7 @@ const Skeleton = ({ count = 1, type = "banner", direction = "column" }) => {
     <>
       {count > 1 ? (
         <ul className={ direction === "column" ? styles.columnList : styles.rowList}>
+
           {[...Array(count)].map((_, index) => (
             <li
               key={index}
@@ -20,6 +21,3 @@ const Skeleton = ({ count = 1, type = "banner", direction = "column" }) => {
 };
 
 export default Skeleton;
-
-
-// styles.rowList

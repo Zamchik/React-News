@@ -27,6 +27,7 @@ const NewsByFilters = ({filters, changeFilter, isLoading, news}) => {
 
       <NewsFilters filters={filters} changeFilter={changeFilter} />
 
+
             <Pagination
             handleNextPage={handleNextPage}
             handlePreviousPage={handlePreviousPage}

@@ -4,4 +4,6 @@
   gap: 12px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   box-sizing: border-box;
+  max-height: 1200px;
+  overflow-y: auto;
 }

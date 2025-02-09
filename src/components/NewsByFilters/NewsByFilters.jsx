@@ -23,9 +23,10 @@ const NewsByFilters = ({filters, changeFilter, isLoading, news}) => {
     }
 
   return (
-    <section className={styles.section}>    
+    <section className={styles.section}>
 
-            <NewsFilters filters={filters} changeFilter={changeFilter}/>   
+      <NewsFilters filters={filters} changeFilter={changeFilter} />
+
 
             <Pagination
             handleNextPage={handleNextPage}

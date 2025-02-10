@@ -19,8 +19,8 @@ export const useFetch = (fecthFunction, params) => {
             } finally {
                 setIsLoading(false)
             }
-        }) ();
+        })();
     }, [fecthFunction, stringParams])
 
-    return {data, isLoading, error}
+    return { data, isLoading, error }
 }

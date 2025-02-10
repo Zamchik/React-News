@@ -5,7 +5,7 @@ export const useFilters = (initialFilters) => {
 
     const changeFilter = (key, value) => {
         setFilters((prev) => {
-            return {...prev, [key]: value}
+            return { ...prev, [key]: value }
         });
     };
     return { filters, changeFilter }

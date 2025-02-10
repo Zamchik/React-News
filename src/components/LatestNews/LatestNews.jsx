@@ -8,7 +8,7 @@ const LatestNews = () => {
 
   return (
     <section className={styles.section}>
-    <BannersList banners={data && data.news} isLoading={isLoading} />
+      <BannersList banners={data && data.news} isLoading={isLoading} />
     </section>
   );
 };
